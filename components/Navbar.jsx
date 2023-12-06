@@ -31,14 +31,16 @@ const doSignOut =() =>{
   return (
     <div className="navbar-container">
       <p className="logo">
-        <Link href="/">JSM Headphones</Link>
+        <Link href="/">SimplyBuy</Link>
       </p>
       <div style={{ display: 'flex', alignItems: 'center',justifyContent:'center' }}>
+        <div style={{marginBottom:"5px",marginRight:"5px"}}>
         {
           user ? (<button style={{alignSelf:"center"}} type="button" className="cart-icon" onClick={() => doSignOut()}>
           <span style={{ fontSize: 12 }}>Signout</span>
         </button>) : (<Link href="/signin">SignIn</Link>)
         }
+        </div>
         <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
           <AiOutlineShopping />
           <span className="cart-item-qty">{totalQuantities}</span>
